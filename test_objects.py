@@ -79,9 +79,17 @@ def test_object_relationships():
     # NOTE: To test that it really works, you probably want to create a Menu
     # with a list that includes things that *aren't* desserts, like integers.
 
-    assert False  # Take this line out, it forces the test to fail
+    dessert1x = Dessert(price=10)
+    dessert2x = Dessert(price=12)
+    dessert3x = Dessert(price=13)
+    cake1x = 12
+    cake2x = 13
+    my_dessertsx = Menu([dessert1x, dessert2x, dessert3x, cake1x, cake2x])
+    my_menux = my_dessertsx.desserts()
+    assert len(my_menux) == 3
 
     # Create a cakes() method that does the same thing.
+
     # This code is the test for cakes():
 
     dessert1 = Dessert(price=10)
